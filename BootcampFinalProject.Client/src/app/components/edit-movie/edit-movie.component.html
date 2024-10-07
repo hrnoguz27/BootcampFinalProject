@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <h2>Filmi Düzenle</h2>
+    <form (ngSubmit)="updateMovie()" class="form">
+        <div class="mb-3">
+            <label for="title" class="form-label">Film Adı:</label>
+            <input id="title" [(ngModel)]="selectedMovie.title" name="title" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="director" class="form-label">Yönetmen:</label>
+            <input id="director" [(ngModel)]="selectedMovie.director" name="director" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="genre" class="form-label">Tür:</label>
+            <input id="genre" [(ngModel)]="selectedMovie.genre" name="genre" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="releaseYear" class="form-label">Yayın Yılı:</label>
+            <input id="releaseYear" [(ngModel)]="selectedMovie.releaseYear" name="releaseYear" type="number" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="rating" class="form-label">Puan:</label>
+            <input id="rating" [(ngModel)]="selectedMovie.rating" name="rating" type="number" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="imageURI" class="form-label">Resim Linki:</label>
+            <input id="imageURI" [(ngModel)]="selectedMovie.imageURI" name="imageURI" class="form-control">
+          </div>
+      <!-- <div class="mb-3">
+        <label for="poster" class="form-label">Poster Güncelle:</label>
+        <input type="file" (change)="onFileSelected($event)" class="form-control">
+      </div> -->
+      <button type="submit" class="btn btn-success">Güncelle</button>
+    </form>
+  </div>
