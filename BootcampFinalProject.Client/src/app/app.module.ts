@@ -7,7 +7,9 @@ import { MovieComponent } from './components/movie/movie.component';
 import { CreateMovieComponent } from './components/create-movie/create-movie.component';
 import { EditMovieComponent } from './components/edit-movie/edit-movie.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { FormsModule } from '@angular/forms';
     MovieComponent,
     CreateMovieComponent,
     EditMovieComponent,
+    AdminDashboardComponent,
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

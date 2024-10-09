@@ -8,7 +8,7 @@ import { Movie, MovieService } from '../../services/movie.service';
 })
 export class MovieComponent implements OnInit {
   movies: Movie[] = [];
-  newMovie: Movie = { title: '', genre: '', releaseYear: 0, director: '', rating: 0, imageURI: '' };
+  newMovie: Movie = { title: '', genre: '', releaseYear: 0, director: '', rating: 0, thumbnailUrl: '',  bannerUrl: '', runningTimeInMin: 0 };
 
   constructor(private movieService: MovieService) {}
 
@@ -17,23 +17,9 @@ export class MovieComponent implements OnInit {
   }
 
   loadMovies(): void {
-    this.movieService.getMovies().subscribe(data => {
+    this.movieService.getMovies();
+    this.movieService.movies.subscribe(data=>{
       this.movies = data;
-    });
-  }
-
-  addMovie(): void {
-    if (this.newMovie.title) {
-      this.movieService.addMovie(this.newMovie).subscribe(() => {
-        this.loadMovies();
-        this.newMovie = { title: '', genre: '', releaseYear: 0, director: '', rating: 0, imageURI: '' };
-      });
-    }
-  }
-
-  deleteMovie(id: number): void {
-    this.movieService.deleteMovie(id).subscribe(() => {
-      this.loadMovies();
-    });
+    })
   }
 }

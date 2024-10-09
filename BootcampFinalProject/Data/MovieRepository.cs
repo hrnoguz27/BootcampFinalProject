@@ -12,9 +12,14 @@ public class MovieRepository : IMovieRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Movie>> GetAllMoviesAsync()
+    public async Task<IEnumerable<Movie>> GetAllMoviesAsync(string searchQuery)
     {
-        return await _context.Movies.ToListAsync();
+        var result = !string.IsNullOrEmpty(searchQuery)
+            ? await _context.Movies.Where(x => x.Title.ToLower().Contains(searchQuery) || x.Director.ToLower().Contains(searchQuery) || x.Genre.ToLower().Contains(searchQuery)).ToListAsync()
+            : await _context.Movies.ToListAsync();
+
+        return result;
+
     }
 
     public async Task<Movie> GetMovieByIdAsync(int id)

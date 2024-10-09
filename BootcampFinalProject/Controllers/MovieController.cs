@@ -1,6 +1,5 @@
 ﻿using BootcampFinalProject.Data;
 using BootcampFinalProject.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BootcampFinalProject.Controllers;
@@ -16,9 +15,9 @@ public class MoviesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+    public async Task<ActionResult<IEnumerable<Movie>>> GetMovies(string search)
     {
-        var movies = await _movieRepository.GetAllMoviesAsync();
+        var movies = await _movieRepository.GetAllMoviesAsync(search);
         return Ok(movies);
     }
 

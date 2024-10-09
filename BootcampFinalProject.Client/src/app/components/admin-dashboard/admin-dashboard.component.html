@@ -1,0 +1,39 @@
+<div class="container-fluid p-5 mt-5">
+    <button class="btn btn-outline-success mb-3" style="float: right;" routerLink="/dashboard/create"> <i
+            class="bi bi-plus-circle"></i> New Movie</button>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Banner</th>
+                <th scope="col">Title</th>
+                <th scope="col">Director</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Running Time</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td><img class="img-fluid" src="{{movie.thumbnailUrl}}" alt="Thumbnail"
+                        style="width: 70px; height: 100px;"></td>
+                <td><img class="img-fluid" src="{{movie.bannerUrl}}" style="width: 150px; height: 100px;" alt="Banner">
+                </td>
+                <td style="max-width: 200px;">{{movie.title}}</td>
+                <td style="max-width: 200px;">{{movie.director}}</td>
+                <td style="max-width: 250px;">{{movie.genre}}</td>
+                <td><i class="bi bi-star-fill"></i> {{movie.rating}}</td>
+                <td><i class="bi bi-clock-fill"></i> {{movie.runningTimeInMin}} min</td>
+                <td>
+                    <button [routerLink]="['/dashboard/edit', movie.id]" type="button"
+                        class="btn btn-outline-warning m-1"><i class="bi bi-pencil-square"></i> Edit</button>
+                    <button (click)="deleteMovie(movie.id!)" type="button" class="btn btn-outline-danger"><i
+                            class="bi bi-trash"></i> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,51 +1,13 @@
-<div class="container mt-5">
-    <h2>Film Listesi</h2>
-    <a routerLink="/create" class="btn btn-primary mb-3">Yeni Film Ekle</a>
-    
-
-    <!-- <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="..." class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          </div>
+<div class="container-fluid p-5 m-5">
+  <div class="d-flex flex-wrap">
+    <div class="p-2" *ngFor="let movie of movies; let i = index">
+      <div class="hovereffect">
+        <img src="{{ movie.thumbnailUrl }}" alt="{{ movie.title }}" style="width: 250px; height: 350px;" class="img-fluid rounded" />
+        <div class="overlay">
+          <h2>{{ movie.title }}</h2>
+          <a class="info" [routerLink]="['/detail', movie.id]">Detail</a>
         </div>
       </div>
-    </div> -->
-
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Poster</th>
-          <th scope="col">Film Adı</th>
-          <th scope="col">Tür</th>
-          <th scope="col">Yayın Yılı</th>
-          <th scope="col">Yönetmen</th>
-          <th scope="col">Puan</th>
-          <th scope="col">Aksiyonlar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let movie of movies; let i = index">
-          <th scope="row">{{ i + 1 }}</th>
-          <td><img class="movie-poster" src="{{movie.imageURI}}" alt="{{movie.title}}"></td>
-          <td>{{ movie.title }}</td>
-          <td>{{ movie.genre }}</td>
-          <td>{{ movie.releaseYear }}</td>
-          <td>{{ movie.director }}</td>
-          <td><i class="bi bi-star-fill"></i> {{ movie.rating }} / 10</td>
-          <td>
-            <a [routerLink]="['/edit', movie.id]" class="btn btn-warning btn-sm me-2">Düzenle</a>
-            <button (click)="deleteMovie(movie.id!)" class="btn btn-danger btn-sm">Sil</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    </div>
   </div>
+</div>

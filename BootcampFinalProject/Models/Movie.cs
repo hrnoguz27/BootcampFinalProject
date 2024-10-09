@@ -8,5 +8,7 @@ public class Movie
     public int ReleaseYear { get; set; }
     public string Director { get; set; }
     public decimal Rating { get; set; }
-    public string ImageUrl { get; set; }
+    public string ThumbnailUrl { get; set; }
+    public string BannerUrl { get; set; }
+    public int RunningTimeInMin { get; set; }
 }

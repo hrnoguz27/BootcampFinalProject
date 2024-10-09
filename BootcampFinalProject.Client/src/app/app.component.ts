@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MovieService } from './services/movie.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'BootcampFinalProject.Client';
+  title = 'HO Movie';
+  constructor(private movieService: MovieService) { }
+  onSubmit(search: any) {
+
+    this.movieService.getMovies(search);
+  }
 }
