@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie, MovieService } from '../../services/movie.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-movie-detail',
@@ -9,6 +10,7 @@ import { Movie, MovieService } from '../../services/movie.service';
 })
 export class MovieDetailComponent implements OnInit{
   currentMovie!: Movie;
+  resourceUrl:string = environment.resourceUrl;
   constructor(private route: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit() {

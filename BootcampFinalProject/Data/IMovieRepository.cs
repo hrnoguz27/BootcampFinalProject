@@ -6,8 +6,8 @@ public interface IMovieRepository
 {
     Task<IEnumerable<Movie>> GetAllMoviesAsync(string searchQuery);
     Task<Movie> GetMovieByIdAsync(int id);
-    Task AddMovieAsync(Movie movie);
-    Task UpdateMovieAsync(Movie movie);
+    Task<Movie> AddMovieAsync(MovieDto movie);
+    Task UpdateMovieAsync(MovieDto movie);
     Task DeleteMovieAsync(int id);
     Task<bool> MovieExistsAsync(int id);
 }

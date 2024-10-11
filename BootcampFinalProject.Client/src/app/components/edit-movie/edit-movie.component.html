@@ -55,28 +55,20 @@
       </div>
     </div>
     <div class="row border mt-5 p-2">
-      <img class="col-md-2 img-fluid" src="{{currentMovie.thumbnailUrl}}" alt="Thumbnail" style="width: 200px;">
-      <div class="col-md-10">
-        <label class="form-label">Thumbnail URL*</label>
-        <input type="text" formControlName="thumbnailUrl" class="form-control" placeholder="Enter Thumbnail Url" required
-          [ngClass]="{ 'is-invalid': isInvalid('thumbnailUrl'), 'is-valid': controls['thumbnailUrl'].valid }">
-        <div *ngIf="isInvalid('thumbnailUrl')" class="invalid-feedback">
-          <div *ngIf=" controls['thumbnailUrl'].errors?.['required']">Thumbnail Url is required!</div>
-        </div>
+      <img class="col-md-4 img-fluid" src="{{resourceUrl}}/{{currentMovie.thumbnailUrl}}" alt="Thumbnail" style="width: 200px;">
+      <div class="col-md-8">
+        <label for="thumbnail" class="form-label">Thumbnail</label>
+        <input type="file" (change)="onThumbnailSelected($event)" required class="form-control">
       </div>
     </div>
-    <div class="row border mt-2 p-2">
-      <img class="col-md-2 img-fluid" src="{{currentMovie.bannerUrl}}" style="width: 200px;" alt="Banner">
-      <div class="col-md-10">
-        <label class="form-label">Banner URL*</label>
-        <input type="text" formControlName="bannerUrl" class="form-control" placeholder="Enter Banner Url" required
-          [ngClass]="{ 'is-invalid': isInvalid('bannerUrl'), 'is-valid': controls['bannerUrl'].valid }">
-        <div *ngIf="isInvalid('bannerUrl')" class="invalid-feedback">
-          <div *ngIf=" controls['bannerUrl'].errors?.['required']">Banner Url is required!</div>
-        </div>
+    <div class="row border mt-1 p-2">
+      <img class="col-md-4 img-fluid" src="{{resourceUrl}}/{{currentMovie.bannerUrl}}" style="width: 200px;" alt="Banner">
+      <div class="col-md-8">
+        <label for="banner" class="form-label">Banner</label>
+        <input type="file" (change)="onBannerSelected($event)" required class="form-control">
       </div>
-    </div>   
-    
+    </div>
+
     <div class="col-12">
       <button class="btn btn-primary" style="float: right;" type="submit">Update Movie</button>
     </div>

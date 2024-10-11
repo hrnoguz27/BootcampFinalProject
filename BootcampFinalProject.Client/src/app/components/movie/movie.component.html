@@ -2,7 +2,7 @@
   <div class="d-flex flex-wrap">
     <div class="p-2" *ngFor="let movie of movies; let i = index">
       <div class="hovereffect">
-        <img src="{{ movie.thumbnailUrl }}" alt="{{ movie.title }}" style="width: 250px; height: 350px;" class="img-fluid rounded" />
+        <img src="{{resourceUrl}}/{{ movie.thumbnailUrl }}" alt="{{ movie.title }}" style="width: 250px; height: 350px;" class="img-fluid rounded" />
         <div class="overlay">
           <h2>{{ movie.title }}</h2>
           <a class="info" [routerLink]="['/detail', movie.id]">Detail</a>

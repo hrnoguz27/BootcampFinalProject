@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie, MovieService } from '../../services/movie.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,6 +9,7 @@ import { Movie, MovieService } from '../../services/movie.service';
 })
 export class AdminDashboardComponent implements OnInit {
   movies: Movie[] = [];
+  resourceUrl:string = environment.resourceUrl;
   constructor(private movieService: MovieService) { }
   ngOnInit(): void {
     this.loadMovies();

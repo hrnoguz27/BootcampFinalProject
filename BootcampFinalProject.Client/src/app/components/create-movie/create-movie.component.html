@@ -1,10 +1,10 @@
 <div class="container p-5 mt-5">
   <h2>New Movie</h2>
-  <form class="row g-3 needs-validation" [formGroup]="newMovieForm" (ngSubmit)="addMovie()">
+  <form class="row g-3 needs-validation" [formGroup]="movieForm" enctype="multipart/form-data" (ngSubmit)="addMovie()">
     <div class="col-md-6">
       <label class="form-label">Title*</label>
       <input type="text" formControlName="title" class="form-control" placeholder="Enter Title" required
-      [ngClass]="{ 'is-invalid': isInvalid('title'), 'is-valid': controls['title'].valid }">
+        [ngClass]="{ 'is-invalid': isInvalid('title'), 'is-valid': controls['title'].valid }">
       <div *ngIf="isInvalid('title')" class="invalid-feedback">
         <div *ngIf=" controls['title'].errors?.['required']">Name is required!</div>
       </div>
@@ -12,7 +12,7 @@
     <div class="col-md-6">
       <label class="form-label">Director*</label>
       <input type="text" formControlName="director" class="form-control" placeholder="Enter Director" required
-      [ngClass]="{ 'is-invalid': isInvalid('director'), 'is-valid': controls['director'].valid }">
+        [ngClass]="{ 'is-invalid': isInvalid('director'), 'is-valid': controls['director'].valid }">
       <div *ngIf="isInvalid('director')" class="invalid-feedback">
         <div *ngIf=" controls['director'].errors?.['required']">Director is required!</div>
       </div>
@@ -20,8 +20,7 @@
     <div class="col-md-12">
       <label class="form-label">Genre*</label>
       <input type="text" formControlName="genre" class="form-control" placeholder="Enter genres separated by a comma"
-        required
-        [ngClass]="{ 'is-invalid': isInvalid('genre'), 'is-valid': controls['genre'].valid }">
+        required [ngClass]="{ 'is-invalid': isInvalid('genre'), 'is-valid': controls['genre'].valid }">
       <div *ngIf="isInvalid('genre')" class="invalid-feedback">
         <div *ngIf=" controls['genre'].errors?.['required']">At least 1 Genre is required!</div>
       </div>
@@ -29,7 +28,7 @@
     <div class="col-md-4">
       <label class="form-label">Release Year*</label>
       <input type="number" formControlName="releaseYear" class="form-control" placeholder="Enter Release Year"
-      [ngClass]="{ 'is-invalid': isInvalid('releaseYear'), 'is-valid': controls['releaseYear'].valid }">
+        [ngClass]="{ 'is-invalid': isInvalid('releaseYear'), 'is-valid': controls['releaseYear'].valid }">
       <div *ngIf="isInvalid('releaseYear')" class="invalid-feedback">
         <div *ngIf=" controls['releaseYear'].errors?.['required']">Release Year is required</div>
         <div *ngIf=" controls['releaseYear'].errors?.['max']">Release year must be in the past years</div>
@@ -55,21 +54,13 @@
         <div *ngIf="controls['runningTimeInMin'].errors?.['min']">Running Time must be greater than 1!</div>
       </div>
     </div>
-    <div class="col-md-12">
-      <label class="form-label">Thumbnail URL*</label>
-      <input type="text" formControlName="thumbnailUrl" class="form-control" placeholder="Enter Thumbnail Url" required
-        [ngClass]="{ 'is-invalid': isInvalid('thumbnailUrl'), 'is-valid': controls['thumbnailUrl'].valid }">
-      <div *ngIf="isInvalid('thumbnailUrl')" class="invalid-feedback">
-        <div *ngIf=" controls['thumbnailUrl'].errors?.['required']">Thumbnail Url is required!</div>
-      </div>
+    <div class="col-md-6">
+        <label for="thumbnail" class="form-label">Thumbnail</label>
+        <input type="file" (change)="onThumbnailSelected($event)" required class="form-control">
     </div>
-    <div class="col-md-12">
-      <label class="form-label">Banner URL*</label>
-      <input type="text" formControlName="bannerUrl" class="form-control" placeholder="Enter Banner Url" required
-        [ngClass]="{ 'is-invalid': isInvalid('bannerUrl'), 'is-valid': controls['bannerUrl'].valid }">
-      <div *ngIf="isInvalid('bannerUrl')" class="invalid-feedback">
-        <div *ngIf=" controls['bannerUrl'].errors?.['required']">Banner Url is required!</div>
-      </div>
+    <div class="col-md-6">
+        <label for="banner" class="form-label">Banner</label>
+        <input type="file" (change)="onBannerSelected($event)" required class="form-control">
     </div>
     <div class="col-12">
       <button class="btn btn-primary" style="float: right;" type="submit">Add New Movie</button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie, MovieService } from '../../services/movie.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-movie',
@@ -8,8 +9,7 @@ import { Movie, MovieService } from '../../services/movie.service';
 })
 export class MovieComponent implements OnInit {
   movies: Movie[] = [];
-  newMovie: Movie = { title: '', genre: '', releaseYear: 0, director: '', rating: 0, thumbnailUrl: '',  bannerUrl: '', runningTimeInMin: 0 };
-
+  resourceUrl:string = environment.resourceUrl;
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {

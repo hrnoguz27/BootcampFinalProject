@@ -35,16 +35,24 @@ public class MoviesController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Movie>> PostMovie(Movie movie)
+    public async Task<ActionResult<Movie>> PostMovie([FromForm] MovieDto movieDto)
     {
-        await _movieRepository.AddMovieAsync(movie);
-        return CreatedAtAction(nameof(GetMovie), new { id = movie.Id }, movie);
+        try
+        {
+            var movie = await _movieRepository.AddMovieAsync(movieDto);
+            return CreatedAtAction(nameof(GetMovie), new { id = movie.Id }, movie);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+       
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutMovie(int id, Movie movie)
+    public async Task<IActionResult> PutMovie(int id, [FromForm] MovieDto movieDto)
     {
-        if (id != movie.Id)
+        if (id != movieDto.Id)
         {
             return BadRequest();
         }
@@ -55,7 +63,7 @@ public class MoviesController : ControllerBase
             return NotFound();
         }
 
-        await _movieRepository.UpdateMovieAsync(movie);
+        await _movieRepository.UpdateMovieAsync(movieDto);
         return NoContent();
     }
 

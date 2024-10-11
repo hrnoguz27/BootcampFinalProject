@@ -18,9 +18,9 @@
         <tbody>
             <tr *ngFor="let movie of movies; let i = index">
                 <th scope="row">{{i + 1}}</th>
-                <td><img class="img-fluid" src="{{movie.thumbnailUrl}}" alt="Thumbnail"
+                <td><img class="img-fluid" src="{{resourceUrl}}/{{movie.thumbnailUrl}}" alt="Thumbnail"
                         style="width: 70px; height: 100px;"></td>
-                <td><img class="img-fluid" src="{{movie.bannerUrl}}" style="width: 150px; height: 100px;" alt="Banner">
+                <td><img class="img-fluid" src="{{resourceUrl}}/{{movie.bannerUrl}}" style="width: 150px; height: 100px;" alt="Banner">
                 </td>
                 <td style="max-width: 200px;">{{movie.title}}</td>
                 <td style="max-width: 200px;">{{movie.director}}</td>
