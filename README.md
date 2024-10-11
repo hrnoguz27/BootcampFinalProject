@@ -20,5 +20,5 @@ To run Frontend, follow these steps:
 3. Navigate to the frontend project: **`cd BootcampFinalProject.Client`**
 4. Run given command to open project with VS Code: **`code .`**
 5. Open terminal and Install dependencies: **`npm install`**
-6. Change the apiUrl with your URL : **`Open src/environments/environment.ts file and change apiURL with your saved backend port`**
+6. Change the apiUrl with your URL : **`Open src/environments/environment.ts file and change "apiURL" and "resourceUrl" with your saved backend port`**
 7. Start the project: **`ng serve --open`**
