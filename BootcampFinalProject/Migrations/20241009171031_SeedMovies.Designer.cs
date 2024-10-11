@@ -57,121 +57,121 @@ namespace BootcampFinalProject.Migrations
                         new
                         {
                             Id = 3,
-                            BannerUrl = "https://w0.peakpx.com/wallpaper/557/513/HD-wallpaper-the-godfather-marlon-brando-vito-corleone.jpg",
+                            BannerUrl = "7e9d6875-fccd-454c-b462-bc22afb0bc10.jpg",
                             Director = "Francis Ford Coppola",
                             Genre = "Epic, Gangster, Drama, Crime, Tragedy",
                             Rating = 9.2m,
                             ReleaseYear = 1972,
                             RunningTimeInMin = 175,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BYTJkNGQyZDgtZDQ0NC00MDM0LWEzZWQtYzUzZDEwMDljZWNjXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "3b98ba65-fedc-4be6-9c65-99b98bf3f926.jpg",
                             Title = "The Godfather"
                         },
                         new
                         {
                             Id = 4,
-                            BannerUrl = "https://c4.wallpaperflare.com/wallpaper/834/280/850/movies-the-shawshank-redemption-wallpaper-preview.jpg",
+                            BannerUrl = "93c20918-51dc-4046-b12c-11c54808763c.jpg",
                             Director = "Frank Darabont",
                             Genre = "Epic, Period Drama, Prison Drama, Tragedy, Drama",
                             Rating = 9.3m,
                             ReleaseYear = 1994,
                             RunningTimeInMin = 142,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "5711c6f1-3f60-409d-b13a-8c0a3ad016d0.jpg",
                             Title = "The Shawshank Redemption"
                         },
                         new
                         {
                             Id = 5,
-                            BannerUrl = "https://images3.alphacoders.com/131/1315823.jpg",
+                            BannerUrl = "6b686f0c-7c9e-40c5-95b9-130f8a3bd6e2.jpg",
                             Director = "Francis Ford Coppola",
                             Genre = "Epic, Gangster, Drama, Crime, Tragedy",
                             Rating = 9.0m,
                             ReleaseYear = 1974,
                             RunningTimeInMin = 202,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BNzc1OWY5MjktZDllMi00ZDEzLWEwMGItYjk1YmRhYjBjNTVlXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "fc559522-8dd4-474f-9ea1-f98cae007cf4.jpg",
                             Title = "The Godfather Part II"
                         },
                         new
                         {
                             Id = 6,
-                            BannerUrl = "https://wallpapercave.com/wp/Q48fR1x.jpg",
+                            BannerUrl = "220bbc2b-48ee-4765-9eb2-f13e3ff4b2ff.jpg",
                             Director = "Christopher Nolan",
                             Genre = "Action Epic, Adventure Epic, Psychological Thriller, Sci-Fi Epic, Action, Adventure, Sci-Fi, Thriller",
                             Rating = 8.8m,
                             ReleaseYear = 2010,
                             RunningTimeInMin = 148,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+                            ThumbnailUrl = "956e35b2-e684-4095-a437-2c22b7c7f4e7.jpg",
                             Title = "Inception"
                         },
                         new
                         {
                             Id = 7,
-                            BannerUrl = "https://lumiere-a.akamaihd.net/v1/images/fightclub_mainmenu_ka_3840x2160_98330c30.jpeg",
+                            BannerUrl = "a744ef00-2db0-43ad-b83b-1587d48d348d.jpg",
                             Director = "David Fincher",
                             Genre = "Psychological Drama, Workplace Drama, Drama",
                             Rating = 8.8m,
                             ReleaseYear = 1999,
                             RunningTimeInMin = 139,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "1109391a-e96e-40ac-8932-8d0283f056f5.jpg",
                             Title = "Fight Club"
                         },
                         new
                         {
                             Id = 8,
-                            BannerUrl = "https://theconsultingdetectivesblog.com/wp-content/uploads/2014/06/the-dark-knight-original.jpg",
+                            BannerUrl = "987a3215-cdd2-4193-becb-a084b7863bd9.jpg",
                             Director = "Christopher Nolan",
                             Genre = "Action Epic, Epic, Superhero, Action, Crime, Drama, Thriller",
                             Rating = 9.0m,
                             ReleaseYear = 2008,
                             RunningTimeInMin = 152,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BMTIzMDc4MzA2Ml5BMl5BanBnXkFtZTcwODU0MzA3MQ@@._V1_.jpg",
+                            ThumbnailUrl = "7fb187ae-bb68-4f47-9a8d-b815119db2d4.jpg",
                             Title = "The Dark Knight"
                         },
                         new
                         {
                             Id = 9,
-                            BannerUrl = "https://s1.dmcdn.net/v/VPo1g1bLR9X3RfLPs/x1080",
+                            BannerUrl = "163c5647-3eeb-44dc-80e6-04418bfc13a0.jpg",
                             Director = "Sidney Lumet",
                             Genre = "Legal Drama, Psychological Drama, Crime, Drama",
                             Rating = 9.0m,
                             ReleaseYear = 1957,
                             RunningTimeInMin = 96,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "00c3bf93-5856-4696-95b2-0c14687b8923.jpg",
                             Title = "12 Angry Men"
                         },
                         new
                         {
                             Id = 10,
-                            BannerUrl = "https://m.media-amazon.com/images/S/pv-target-images/2f0e365f033851be687ca2179166fb614c2e2175d4a812b671abb533650b8639.jpg",
+                            BannerUrl = "21ba7840-7b0a-4c16-b4eb-f77c24131518.jpg",
                             Director = "Peter Jackson",
                             Genre = "Adventure Epic, Fantasy Epic, Quest, Sword & Sorcery, Action, Adventure, Drama, Fantasy",
                             Rating = 8.9m,
                             ReleaseYear = 2001,
                             RunningTimeInMin = 178,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BZjRlZGYwYjUtYWQwNi00N2JjLTk2NmUtODBkODJkNjNjZTYyXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "7cb3bcdc-79eb-42d4-ac1c-3233c23ff18f.jpg",
                             Title = "The Lord of the Rings: The Fellowship of the Ring"
                         },
                         new
                         {
                             Id = 11,
-                            BannerUrl = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg",
+                            BannerUrl = "878a437a-ce65-4033-97fd-a7c57800b4bf.jpg",
                             Director = " Lana Wachowski & Lilly Wachowski",
                             Genre = "Action Epic, Artificial Intelligence, Cyberpunk, Dystopian Sci-Fi, Gun Fu, Martial Arts, Sci-Fi Epic, Action, Sci-Fi",
                             Rating = 8.7m,
                             ReleaseYear = 1999,
                             RunningTimeInMin = 136,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BZjVkOGM1ZTctZGZmOC00MTM0LWFjYjctNjg2MTg1YTM4N2VlXkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "85170eab-36c5-45d5-b393-f924f75ff904.jpg",
                             Title = "The Matrix"
                         },
                         new
                         {
                             Id = 12,
-                            BannerUrl = "https://indigomusic.com/wp-content/uploads/2024/01/untitled-design-51-min-2-1024x576.png",
+                            BannerUrl = "07944830-465d-4eb7-86ae-ac97dbb0fcc8.jpg",
                             Director = " David Fincher",
                             Genre = "Cop Drama, Hard-boiled Detective, Legal Drama, Police Procedural, Psychological Thriller, Serial Killer, Crime, Drama, Mystery, Thriller",
                             Rating = 8.6m,
                             ReleaseYear = 1995,
                             RunningTimeInMin = 127,
-                            ThumbnailUrl = "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_.jpg",
+                            ThumbnailUrl = "c895e1fe-0bb4-4888-9f91-6a0fdae6dd55.jpg",
                             Title = "Se7en"
                         });
                 });
