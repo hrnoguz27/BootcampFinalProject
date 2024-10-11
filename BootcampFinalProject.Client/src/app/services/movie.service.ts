@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 export interface Movie {
   id?: number;
@@ -19,7 +20,7 @@ export interface Movie {
   providedIn: 'root'
 })
 export class MovieService {
-  private apiUrl = 'https://localhost:7278/api/movies';
+  private apiUrl = `${environment.apiUrl}/movies`;
   movies = new Subject<Movie[]>();
   constructor(private http: HttpClient, private router: Router) { }
 
